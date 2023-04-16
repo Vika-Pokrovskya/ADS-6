@@ -20,8 +20,8 @@ class TPQueue {
       int assist = left;
       mass[left % size] = value;
       T t = mass[assist % size];
-      while (mass[(assist - 1) % size].prior < mass[assist % size].prior &&
-             right < assist) {
+      while (mass[(assist - 1) % size].prior < mass[assist % size].prior \
+      && right < assist) {
         t = mass[assist % size];
         mass[assist % size] = mass[(assist - 1) % size];
         mass[(assist - 1) % size] = t;
@@ -35,7 +35,7 @@ class TPQueue {
     if (isEmpty()) {
       throw std::string("empty");
     } else {
-      cast-=1;
+      cast -= 1;
       return mass[right++ % size];
     }
   }
